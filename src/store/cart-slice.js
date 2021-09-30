@@ -10,6 +10,9 @@ const cartSlice = createSlice({
     addItemToCart(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id); // checking if newItem already exists in the array (cart)
+
+      state.totalQuantity++; // always want to add one to the qty
+
       if (!existingItem) {
         state.items.push({
           itemId: newItem.id,
@@ -26,6 +29,7 @@ const cartSlice = createSlice({
     removeItemFromCart(state, action) {
       const id = action.payload;
       const existingItem = state.items.find(item => item.id === id);
+      state.totalQuantity--; // always want to reduce qty by 1 when we remove
       if (existingItem.quantity === 1) {
         state.items = state.items.filter(item => item.id !== id);
        // filter() ALL the items where the IDs DO NOT match the one we're trying to remove, thus the one where it does match, it will be removed
