@@ -1,7 +1,7 @@
 # ShoppingApp (_Advanced Redux_)
 
 ### Overview
-I worked on this basic app while teaching myself _Advanced Redux_, particularly Side Effects and Asynchronous Code.
+Built this app while teaching myself _Advanced Redux_, particularly Side Effects and Asynchronous Code. I use [Google Firebase](https://firebase.google.com/) for the backend to persist data and store it.
 
 ### Technologies
 * React, Redux, JavaScript
@@ -9,6 +9,7 @@ I worked on this basic app while teaching myself _Advanced Redux_, particularly 
 * Side Effects (_useEffect_)
 * Data Store
 * Redux Toolkit
+* [Google Firebase](https://firebase.google.com/) 
 * Custom React Hooks (_useSelector, useDispatch_)
 * Re-usable components
 
