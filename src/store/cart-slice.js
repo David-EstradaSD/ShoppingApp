@@ -15,11 +15,11 @@ const cartSlice = createSlice({
 
       if (!existingItem) {
         state.items.push({
-          itemId: newItem.id,
-          price: newItem.price,
-          quantity: 1,
-          totalPrice: newItem.price,
+          id: newItem.id,
           name: newItem.title,
+          price: newItem.price,
+          totalPrice: newItem.price,
+          quantity: 1,
         }); // Recall: redux toolkit (internally) ensures we can mutate state data without having to return a brand new state object
       } else {
           existingItem.quantity++;
