@@ -5,6 +5,7 @@ const cartSlice = createSlice({
   initialState: {
     items: [],
     totalQuantity: 0,
+    changed: false, // this property is to change ONLY if we add / remove items from Cart BUT NOT from when we "fetch" data from DB aka replaceCart();
   },
   reducers: {
     replaceCart(state, action) {
@@ -14,8 +15,8 @@ const cartSlice = createSlice({
     addItemToCart(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id); // checking if newItem already exists in the array (cart)
-
       state.totalQuantity++; // always want to add one to the qty
+      state.changed = true;
 
       if (!existingItem) {
         state.items.push({
@@ -34,6 +35,8 @@ const cartSlice = createSlice({
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       state.totalQuantity--; // always want to reduce qty by 1 when we remove
+      state.changed = true;
+      
       if (existingItem.quantity === 1) {
         state.items = state.items.filter((item) => item.id !== id);
         // filter() ALL the items where the IDs DO NOT match the one we're trying to remove, thus the one where it does match, it will be removed

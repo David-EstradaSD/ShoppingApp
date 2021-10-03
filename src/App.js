@@ -24,7 +24,10 @@ function App() {
       return;
     }
 
-    dispatch(sendCartData(cart)); // Redux is able to handle "actions" that return functions (since we're returning a dispatch function in cart-slice.js "sendCartData")
+    if (cart.changed) {
+      dispatch(sendCartData(cart)); 
+    }
+
   }, [cart, dispatch]); // we will send this HttpRequest each time our Cart changes
 
   return (
