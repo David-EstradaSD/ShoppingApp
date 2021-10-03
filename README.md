@@ -7,7 +7,7 @@ Built this app while teaching myself _Advanced Redux_, particularly Side Effects
 * React, Redux, JavaScript
 * HttpRequests / Asynchronous Functions with Redux
 * Side Effects (_useEffect_)
-* Data Store
+* Data Store (_Actions, Payloads, Reducers_)
 * Redux Toolkit
 * [Google Firebase](https://firebase.google.com/) 
 * Custom React Hooks (_useSelector, useDispatch_)
@@ -19,4 +19,4 @@ This app is currently only ran locally. Just do the usual steps:
 * npm start 
 
 ### Lessons Learned
-This app was part of an advanced lesson on Redux. I learned how to send and fetch data with Redux and handle side effects. This project was built with the assistance of a tutorial through Udemy that taught the _React framework_ ( 48+ hours ).
+This app was part of an advanced lesson on Redux. I learned how to send and fetch data with Redux and handle side effects, as well as implement logic in Redux "store actions" and utilize those in other components. This project was built with the assistance of a tutorial through Udemy that taught the _React framework_ ( 48+ hours ).
