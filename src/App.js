@@ -4,8 +4,9 @@ import Cart from "./components/Cart/Cart";
 import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import Notification from "./components/UI/Notification";
+import { sendCartData } from './store/cart-slice';
 
-let isInitialState = true; // this is for the application start to prevent resetting the backend data with the async request
+let isInitialLoad = true; // this is for the application start to prevent resetting the backend data with the async request
 
 function App() {
   const dispatch = useDispatch();
@@ -14,12 +15,12 @@ function App() {
   const notification = useSelector((state) => state.ui.notification);
 
   useEffect(() => {
-
-    if (isInitialState) {
-      isInitialState = false;
+    if (isInitialLoad) {
+      isInitialLoad = false;
       return;
     }
 
+    dispatch(sendCartData(cart)); // Redux is able to handle "actions" that return functions (since we're returning a dispatch function in cart-slice.js "sendCartData")
   }, [cart, dispatch]); // we will send this HttpRequest each time our Cart changes
 
   return (
