@@ -4,15 +4,15 @@ import classes from "./Products.module.css";
 const DUMMY_PRODUCTS = [
   {
     id: "p1",
-    price: 6,
-    title: "My first book",
-    description: "Some book that I wrote",
+    price: 8.99,
+    title: "David's Autobiography: An Exceptional Journey",
+    description: "This is a fake book that Dave didn't write",
   },
   {
     id: "p2",
-    price: 8,
-    title: "My second book",
-    description: "Some other book that I wrote",
+    price: 10.99,
+    title: "David's Quide to Success",
+    description: "Some other book that I didn't actually write",
   },
 ];
 
