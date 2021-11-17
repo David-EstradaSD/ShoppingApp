@@ -3,7 +3,7 @@
 ### Overview
 Built this app while teaching myself _Advanced Redux_, particularly Side Effects and Asynchronous Code. I use [Google Firebase](https://firebase.google.com/) for the backend to persist data and store it.
 
-### Technologies
+### Technologies Used
 * React, Redux, JavaScript
 * HttpRequests / Asynchronous Functions with Redux
 * Side Effects (_useEffect_)
