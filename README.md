@@ -14,7 +14,7 @@ Built this app while teaching myself _Advanced Redux_, particularly Side Effects
 * Re-usable components
 
 ### How to Run
-This app is currently only ran locally. Just do the usual steps:
+This app is not deployed and thus, can only be run locally. Just do the usual steps:
 * git clone the repo
 * npm start 
 
